@@ -13,6 +13,7 @@ Finally print the average into console using printf.
 int main()
 {
 	    int num1,num2,num3;
+		float avg;
 	    printf("Enter first number: ");
 	    scanf("%d",&num1);
 	    
@@ -22,13 +23,11 @@ int main()
 	    printf("Enter third number: ");
 	    scanf("%d",&num3);
 	    
-		printf("Average is %d\n", (num1+num2+num3)/3);
-	    
-	    
-	    
-	
+		avg= (num1+num2+(float)num3)/3;
 
-	// complete the program as per instructions.
+		printf("Average is %f\n", avg);
+	    
+	    
 
 
 	return 0;
