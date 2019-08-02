@@ -11,6 +11,8 @@ int main()
     // this kind of print prints the inner printf and then that outter printf will print the number of characters in the inner printf
     printf("%d",printf("Hello"));
 
+    printf("\"Hello\"");
+
 
 
     return 0;
