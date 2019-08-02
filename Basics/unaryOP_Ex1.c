@@ -2,7 +2,7 @@
 /*
 Lesson: 
 
-There are 4 Unary Operators, these include:
+There are 6 Unary Operators, these include:
 1. Position '+' example => a=+1;
 2. Negative '-' example => a=-1;
 3. Increment (post or pre) '++' example => a++ same as  a+=1;
