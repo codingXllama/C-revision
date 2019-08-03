@@ -1,0 +1,37 @@
+ you have more than one statement under if or else (or any other block in C like a loop), then you need to put the code within {},
+but if you have only one statement then the parenthesis is just option in all cases.
+
+
+Example 1: 
+if (condition1){   // this is mandatory as we have multiple statements (2 statements)
+    statement1;
+    statement2;  
+}
+else{    // mandatory as we have 2 statements
+    statement1;
+    statement2;      
+}
+ 
+Example 2: 
+if (condition1){   // this is NOT mandatory as we have multiple 1 statement, just optional
+    statement1; 
+}
+else{    // NOT mandatory as we have 1 statement, just optional
+    statement1;      
+}
+ 
+Example 3:
+if (condition1){   // this is mandatory as we have multiple statements (2 statements)
+    statement1;
+    statement2;  
+}
+else    // NOT mandatory as we have single statement, you may provide {} as well
+    statement1;
+ 
+Example 4:
+if (condition1)   // here NOT mandatory as we have multiple single statement, you may provide as well
+    statement1; 
+else{    // mandatory as we have 2 statements
+    statement1;
+    statement2;      
+}
