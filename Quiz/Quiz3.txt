@@ -1,0 +1,188 @@
+
+
+Question 1:
+Which one is not a valid variable name?
+Ans: 1name
+Reason:
+This is not a valid variable name, starts with digit, a variable name cannot start with digits, however, digits can be there but not as first character.
+
+
+Question 2:The following statement is going to "Hello" in console.
+
+printf("\"Hello\"");
+
+Ans: true
+Reason: \" is the same as outputting '
+a \" will always be interpreted as " within a String The following will print He"llo printf("He\"llo");
+Here is another example: printf("How \"are\" you?"); 
+will print - How "are" you? So the printf("\"Hello\""); will print "Hello"
+
+
+Question 3:
+Can you predict the output of the following statement?
+
+printf("%d", printf("%d", printf("Hello")))
+
+Ans: Hello51
+Reason: The inner most printf gets called first and that prints Hello and returns 5, then the next one prints 5 and returns 1 finally outer most printf prints 1.
+
+
+
+
+Question 4:
+Predict the output of the following program. Do not compile and execute, try to answer from your understanding.
+
+#include <stdio.h>
+
+int main(){
+
+int k = 015;
+
+printf("%d,%x,%o\n", k, k, k);
+
+return 0;
+
+}
+
+Ans: 13,D,15
+Reason: Any number starting with 0 is considered as octal literal in C (in Java, C++ and C# as well).
+%x is format specifier of Hexadecimal, %d signed decimal integers and %o is for octals.
+Therefore, first one is the decimal equivalent of the Octal number 15, second is the hex equivalent and third is the octal number itself.
+
+
+Question 5:
+#include <stdio.h>
+
+int main(){
+
+int k = 10;
+
+int p = 20;
+
+float f = k/p;
+
+printf("%f",f);
+
+return 0;
+
+}
+
+Predict the output of the above program.
+
+Ans: 0.000000
+Reason: Operation between 2 integers results in integers.
+
+
+
+Question 6:
+What is the size of int type according to C99 standard?
+
+Ans: 4 Bytes
+
+Question 7:
+Predict the output, please do not compile and execute, rather use your conception.
+
+#include <stdio.h>
+
+int main(){
+
+int x = 12;
+
+x = printf("%d", x++);
+
+printf("%d", ++x);
+
+return 0;
+
+}
+
+Ans:123
+Reason: Step1: print the inner printf value which is 12.
+        Step2: notice how the printf is assigned to a variable, that means that variable 'x' will store the number of chars the printf successfully printer which is 2, thus x=2
+        Step3: In the last printf, we have to pre-increment that x, such that ++x is same as 1+2 which equals 3, so x=3
+In Step1, we gain 12
+In step3, we gain 3
+Combine steps 1 & 3, we get 123
+
+
+Question 8:
+Check the following code segment and try to predict what's going to happen?
+
+#include <stdio.h>
+
+int main(){
+
+int x = ++2;
+
+printf("%d", x);
+
+return 0;
+
+}
+
+Ans: Compile error, because Lvalue is required
+Reason: 2 is a constant and we try to change a constant using unary increment operator.
+
+
+Question 9:
+What is the value of x after the following initialisation:
+
+int x = 5 && 6>7 || !0 && 0;
+
+Ans: 0
+Reason: Any number other than 0 is true
+So.. Solving from left to right since && operator has left to right associativity
+5 is true , so we must check the other condition
+true && 6>7 is false, since 6 is NOT greater than 7.
+Hence true && false is false(0)
+
+Looking at the next condition on the right of the || operator, we have !0 && 0.
+Let's break it down..
+!0 is same as saying not false, so the opposite of false is true.
+Hence, !0 = true(1)
+
+Now we must check the next condition, by defn. of AND operator.
+1 && 0 is false(0), by defn of && operator
+
+Combining both solutions to the left and right expressions we get 0 || 0 , which results to 0, by defn of OR operator.
+
+
+Question 10:
+What is the size of 0.12 in C?
+
+Ans: 8 bytes
+
+any real number constant in C/C++/Java is represented as double by default. 
+so 0.12 is represented as double and not as float. 
+Since a double takes 8 bytes, so the result is 8.
+
+
+
+Question 11:
+Predict the output, please do not compile and execute rather try to use your basic understanding.
+
+#include <stdio.h>
+
+int main(){
+
+int x = -1;
+
+int y = -2;
+
+int z = ++x || ++y;
+
+printf("%d,%d,%d", x, y, z);
+
+return 0;
+
+}
+
+Ans: 0,01,1
+
+Reason:
+If the left hand operand of OR is true, then the entire OR is true, as we know that, true OR anything is true. 
+Please also note that, any non zero value is treated as true value in C. Now let's consider the code: int x = -1; int y = -2; int z = ++x || ++y; 
+The evaluation will take place from left to right, ++x will yield 0, and that is false, now since the left is false the right operand of OR will be executed, ++y will
+yield -1 for y, now finally 0 || -1 will provide 1, as 0 is false, -1 is true and false || true is true and that will be 1, so 1 will be assigned to z.
+
+
