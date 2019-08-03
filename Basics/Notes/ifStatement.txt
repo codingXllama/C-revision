@@ -1,0 +1,32 @@
+if an if-statement condition has a ';' semi-colon at the end of the condition, then that it statment is now TERMINATED/Ended.
+If the if-statement is terminated, then that means the the if-statement no longer is containing it's body.
+
+NOTE*** You are able to run and compile the program, but you will get an error saying you have a "EMPTY if-block"
+
+If the if-statement used to have a body, then now since the if-statment is terminated due to the semi-colon, then that body NO LONGER belongs to the if-condition
+If the if-statement is terminated and it contains an else block, then you will GET A COMPILE ERROR, because you cannot have an else block if you don't have an if block.
+
+
+
+Here is an example of code snippet inside main().
+
+
+Example 1.
+
+if(printf("hi"));
+    printf("a");
+
+//the output will be: hia BUT you will get a error warning from the compiler saying you have a empty if block
+
+
+
+Example 2.
+
+if(!printf("hi"));
+    printf("a");
+else
+    printf("bye");
+
+//the output will be: NO OUTPUT, since you cannot have else-block without having a if condition. -Compiler error-
+
+
