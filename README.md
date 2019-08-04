@@ -8,4 +8,4 @@ I Also have created notes for the C-topics and Reasoning behind the Assignment Q
 
 1.Secrets of printf
 2.Secrets of Scanf
-3. Secrets of If-Statements
+3.Secrets of If-Statements
