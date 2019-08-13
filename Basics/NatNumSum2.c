@@ -26,7 +26,7 @@ int main()
 
     printf("The sum of the numbers: %d\n", totalSum);
 
-    // int initialUserValue = userValue;
+    // int initialUserValue = userValue[]
 
     // while (userValue >= 0)
     // {
