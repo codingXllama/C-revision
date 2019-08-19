@@ -70,21 +70,21 @@ int main()
 	while (!quit)
 	{
 		// print the menu here
+		printf("\n-------MENU---------\n");
 		printf("1.Find factorial\n");
-		printf("2. Find a^b\n");
-		printf("3. Quit");
+		printf("2.Find a^b\n");
+		printf("3.Quit\n");
 		// get the response into option variable.
-		printf("What you want to do: ");
+		printf("\nWhat you want to do: ");
 		scanf("%d", &option);
 		// Now. you can use if-else to check the option and do needful
 
 		switch (option)
 		{
 		case 1:
-
 			printf("Enter a number: ");
-			n = 0;
 			scanf("%d", &n);
+			printf("The valud of p is: %d\n", p);
 			if (n < 0)
 			{
 				printf("Sorry cannot take the fact of negative numbers\n");
@@ -102,17 +102,28 @@ int main()
 				}
 				else
 				{
-					while (n > 0)
+					int counter = 1;
+					while (counter <= n)
 					{
-						p *= n;
-						n--;
+						p *= counter;
+						counter += 1;
 					}
 				}
 				printf("The factorial is %d\n", p);
+				// Resetting the factorial
+				p = 1;
 			}
 			break;
 
 		case 2:
+			printf("Enter value of the base: ");
+			scanf("%lf", &base);
+
+			printf("Enter a value of the power: ");
+			scanf("%lf", &exp);
+
+			// Displaying the result
+			printf("%d^%d = %.1lf\n", (int)base, (int)exp, pow(base, exp));
 
 			break;
 		case 3:
@@ -134,4 +145,5 @@ int main()
 		// print the return value using printf. You may declare a variable to hold the
 		// result.
 	}
+	printf("\nHave a Nice life!\n");
 }
