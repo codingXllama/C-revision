@@ -1,4 +1,6 @@
 // In this Example we will avoid reading a string as an input for the sscanf function
+// to extract a particule string example "My Name: "
+// use %*s
 
 #include <stdio.h>
 #include <string.h>
